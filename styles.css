@@ -1,0 +1,251 @@
+/* ########################### APORTES ########################### */
+.floating {   /* objeto "ventana modal" que flota sobre el mapa */
+	display: flex;
+	position:absolute;
+	z-index:0;
+	width:60%;
+	top:10%;
+	left:20%;
+	background-color:#404040;
+	border: 3px solid #AAAAAA;
+	opacity: 0;
+	border-radius: 15px;
+}
+.floating p {
+	margin: 2%;
+}
+.closeIcon {   /* pequeño boton X sobre el que se impone un método JS para cerrar la ventana modal */
+	display: block;
+	position:absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}
+.show { /* complemento que se agregará a los atributos de la clase "floating" mediante javascript */
+  pointer-events: auto;
+  opacity: 0.8;
+	z-index:2;
+}
+
+/* ########################### CODIGO RECICLADO DE LO VISTO EN LA ULTIMA PARTE DEL CURSO ########################### */
+.imgM {
+	max-width: 30%;
+	float:right;
+	margin:2%;
+	border: 1px solid #FFFFFF;
+}
+.CERNmap {
+	position:relative;
+	width: 95%;
+	padding: 1%;
+	margin:auto;
+	display:block;
+}
+.mapa {
+	width: 100%;
+	display: block;
+}
+/*Estilos para cada uno de los puntos en el mapa interactivo*/
+.punto1 {                  /* DETECTOR CMS */
+	position:absolute;
+	z-index:2;
+	width:4%;
+	bottom:41%;
+	left:7%;
+}
+.punto2 {                  /* DETECTOR LHCb */
+	position:absolute;
+	z-index:2;
+	width:4%;
+	bottom:61%;
+	left:55%;
+}
+.punto3 {                  /* DETECTOR ATLAS */
+	position:absolute;
+	z-index:2;
+	width:4%;
+	bottom:57%;
+	left:74%;
+}
+.punto4 {                  /* DETECTOR ALICE */
+	position:absolute;
+	z-index:2;
+	width:4%;
+	bottom:45.5%;
+	left:88%;
+}
+
+.punto1:hover {
+	opacity: 2;
+	animation: flash .8s;
+}
+.punto2:hover {
+	opacity: 2;
+	animation: flash .8s;
+}
+.punto3:hover {
+	opacity: 2;
+	animation: flash .8s;
+}
+.punto4:hover {
+	opacity: 2;
+	animation: flash .8s;
+}
+
+
+/* ########################### A PARTIR DE AQUI EMPIEZAN LOS ESTILOS QUE TENIA ANTES DE LA ENTREGA DE JAVASCRIPT ########################### */
+
+.sidebar { /* caracteristicas del sidebar */
+	position: fixed;
+	width: 200px;
+	color: white;
+	text-align: center;
+}
+
+.CERNlogo { /* tamaño del logo, igual que el resto del sidebar */
+	width: 200px;
+}
+
+.CERNlogo:hover { /* Efecto "Flash" para hover del logo en el sidebar */
+	opacity: 1;
+	animation: flash .5s;
+}
+@keyframes flash {
+	0% {
+		opacity: .8;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.center {  /* clase con la que centro las imagenes */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.HistoriaNavBar {  /* caracteristicas del menu de navegacion interno de Historia */
+	text-align: center;
+	padding: 0px 25px 0px 25px;
+}
+
+.remaining_region {  /* region "resto de la pagina" aparte del sidebar */
+	margin-left: 230px;
+	color: white;
+}
+.botonMenu {      /* estilo para cada botón del menu de navegación */
+	font-size: 20px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+	width: 150px;
+	background-image: url(images/bluebutton.png);
+	padding:15px 25px 15px 25px;  /* up right down left */
+	float: left;
+	cursor: pointer;
+	color: black;
+	text-decoration: none;
+}
+.botonMenu:hover {
+	color: white;
+	text-shadow: 1px 1px #000000;
+	background-image: none;     /* boton "fantasma" para pdoer usar atributo background-color */
+	background-color: #555;
+	cursor:pointer;
+}
+
+ul {        /* Caracteristicas de la "unordered list" que solo se usa en la Sidebar */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {      /* los estilos aplicados a una etiqueta valen para todos los casos */
+	background-color: black;
+	text-align: justify;
+	margin-right: 30px;
+}
+
+h1 {        /* tamaño mas grande a los titulos h1 */
+	font-size: 50px
+}
+
+a {         /* hipervinculos sin subrayar */
+	text-decoration: none;
+}
+
+#btn-menu {
+    display: none;   /* oculta el checkbox cuando no es necesario*/
+}
+header {
+    width: 100%;
+		z-index: 10;	/* coloca el checkbox por encima del contenido*/
+
+}
+header label {     /* coloca el checkbox en un lugar y tamaño exactos*/
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
+header label:hover {
+    cursor: pointer;    /* cambia el cursor sobre el checkbox para indicar la interacción*/
+}
+
+.minilogo {
+	display: none;
+}
+
+
+
+/* cuando la ventana mida menos de 860px, en este caso el cambio es muy pequeño solo aplicado a las imagenes */
+@media only screen and (max-width: 860px) {
+	.center {  /* en versiones mas pequeñas hago que las imagenes se ajusten al ancho de la clase remaining_region */
+		width: 100%;
+	}
+}
+
+
+
+
+
+/* cuando la ventana mida menos de 640px, el cambio es casi exactamente igual al del ejemplo con ligeras adiciones */
+@media only screen and (max-width: 640px) {
+
+	.minilogo {
+		display: block;
+		position: fixed;
+		right: 10px;
+		top: 10px;
+	}
+	#btn-menu:checked ~ .sidebar {  /* el checkbox controla las dos posiciones del menu */
+			margin-top: 0px;
+			margin-left: 1px;
+	}
+	header label{
+		 display: block; /* se muestra el checkbox cuando se reduce la ventana*/
+	}
+	.sidebar {
+			position: fixed;  /* sostiene la posición aunque se haga scroll en el contenido */
+			z-index: 30; /* para asegurar que el menu esta por encima de todo lo demás*/
+			width: 200px; /* se refiere al ancho del fondo del menu y no a los botones */
+			background: rgba(255,255,255, 0.2); /* rojo, verde, azul, alpha (transparencia) */
+			margin-left: -60%; /* se oculta porque se coloca por fuera de la ventana*/
+			margin-top: 0px;
+			transition: all 2s;   /* la animación de desplegar el menu dura 1 segundo*/
+	}
+	.CERNlogo { /* quito el logo grande de CERN */
+		display: none;
+	}
+	.remaining_region {  /* region "resto de la pagina" aparte del sidebar */
+		margin-left: 40px;
+		color: white;
+		margin-right: 15px;
+	}
+	.center {  /* en versiones mas pequeñas hago que las imagenes se ajusten al ancho de la clase remaining_region */
+		width: 100%;
+	}
+}
