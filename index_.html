@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slytherin Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-slytherin: #1A472A;
+            --silver-slytherin: #AAAAAA;
+            --dark-slytherin: #0D2618;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-slytherin);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--green-slytherin);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--silver-slytherin);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--silver-slytherin);
+        }
+
+        header p {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--green-slytherin);
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background-color: var(--green-slytherin);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--green-slytherin);
+            border-top: 4px solid var(--silver-slytherin);
+        }
+
+        footer p {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--silver-slytherin);
+        }
+
+        footer a {
+            color: var(--silver-slytherin);
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Slytherin Programmer</h1>
+        <p>Ambition | Cunning | Resourcefulness</p>
+    </header>
+
+    <div class="container">
+        <section class="section" id="about">
+            <h2>About Me</h2>
+            <div class="card">
+                <h3>Who Am I?</h3>
+                <p>I am a resourceful programmer with a knack for solving problems and crafting elegant solutions. Passionate about coding, magic, and making an impact.</p>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+            <div class="card">
+                <h3>Project 1</h3>
+                <p>A web-based application that combines logic and creativity to deliver a seamless user experience.</p>
+            </div>
+            <div class="card">
+                <h3>Project 2</h3>
+                <p>An innovative algorithm designed to optimize performance and efficiency.</p>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Contact</h2>
+            <div class="card">
+                <h3>Get In Touch</h3>
+                <p>Email: slytherin.dev@example.com</p>
+                <p>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Slytherin Programmer | Built with Ambition</p>
+    </footer>
+</body>
+</html>
+
