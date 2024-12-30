@@ -63,7 +63,6 @@ header p {
     text-decoration: none; /* Remove underline */
     color: inherit; /* Make the color inherit from the parent element */    
     display: block; /* Ensure it behaves like a block */
-    /* text-align: center;     */
 }
 
 .card-certificate {
@@ -100,4 +99,50 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+
+/* mas */
+
+.index {
+    text-decoration: none; /* Remove underline */
+}
+
+.responsive-img {
+    width: 100%; /* Image takes up the full width of its container */
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 800px; /* Optional: sets a maximum width */
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    margin-bottom: 5px;
+}
+
+
+.button-container {
+    text-align: center; /* Center the buttons horizontally */
+}
+
+.button {
+    display: inline-block; /* Add this line */
+    padding: 5px 10px;
+    font-size: 15px;
+    color: white;
+    background-color: var(--green-slytherin);
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: var(--silver-slytherin);
+}
+
+.card-certificate:hover {
+    background-color: var(--silver-slytherin);
 }
