@@ -1,8 +1,8 @@
 :root {
-    --green-slytherin: #1A472A;
-    --silver-slytherin: #AAAAAA;
-    --dark-slytherin: #0D2618;
-    --white: #FFFFFF;
+    --blue-ravenclaw: #0E1A40; /* Ravenclaw Blue */
+    --bronze-ravenclaw: #946B2D; /* Bronze */
+    --dark-ravenclaw: #0A1426; /* Dark Ravenclaw Blue */
+    --white: #FFFFFF; /* Keep white as-is */
 }
 
 * {
@@ -13,22 +13,22 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--dark-slytherin);
+    background-color: var(--dark-ravenclaw);
     color: var(--white);
     line-height: 1.6;
 }
 
 header {
-    background-color: var(--green-slytherin);
+    background-color: var(--blue-ravenclaw);
     padding: 20px;
     text-align: center;
-    border-bottom: 4px solid var(--silver-slytherin);
+    border-bottom: 4px solid var(--bronze-ravenclaw);
 }
 
 header h1 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: var(--silver-slytherin);
+    color: var(--bronze-ravenclaw);
 }
 
 header p {
@@ -49,12 +49,12 @@ header p {
 .section h2 {
     font-size: 2rem;
     font-weight: 600;
-    color: var(--green-slytherin);
+    color: var(--bronze-ravenclaw);
     margin-bottom: 10px;
 }
 
 .card {
-    background-color: var(--green-slytherin);
+    background-color: var(--blue-ravenclaw);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -81,18 +81,18 @@ header p {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: var(--green-slytherin);
-    border-top: 4px solid var(--silver-slytherin);
+    background-color: var(--blue-ravenclaw);
+    border-top: 4px solid var(--bronze-ravenclaw);
 }
 
 footer p {
     font-size: 1rem;
     font-weight: 300;
-    color: var(--silver-slytherin);
+    color: var(--bronze-ravenclaw);
 }
 
 footer a {
-    color: var(--silver-slytherin);
+    color: var(--bronze-ravenclaw);
     text-decoration: none;
     font-weight: 400;
 }
@@ -132,7 +132,7 @@ footer a:hover {
     padding: 5px 10px;
     font-size: 15px;
     color: white;
-    background-color: var(--green-slytherin);
+    background-color: var(--blue-ravenclaw);
     border: none;
     border-radius: 8px; /* Rounded corners */
     cursor: pointer;
@@ -140,9 +140,9 @@ footer a:hover {
 }
 
 .button:hover {
-    background-color: var(--silver-slytherin);
+    background-color: var(--bronze-ravenclaw);
 }
 
 .card-certificate:hover {
-    background-color: var(--silver-slytherin);
+    background-color: var(--bronze-ravenclaw);
 }
