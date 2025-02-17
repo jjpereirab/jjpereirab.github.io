@@ -91,16 +91,6 @@ footer p {
     color: var(--bronze-ravenclaw);
 }
 
-footer a {
-    color: var(--bronze-ravenclaw);
-    text-decoration: none;
-    font-weight: 400;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
 
 /* mas */
 
@@ -145,4 +135,13 @@ footer a:hover {
 
 .card-certificate:hover {
     background-color: var(--bronze-ravenclaw);
+}
+
+.card a {
+    text-decoration: none; /* Remove underline */
+    color: var(--bronze-ravenclaw);
+}
+
+.card a:hover {
+    text-decoration: underline;
 }
