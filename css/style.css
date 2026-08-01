@@ -1,8 +1,13 @@
 :root {
-    --blue-ravenclaw: #0E1A40; /* Ravenclaw Blue */
-    --bronze-ravenclaw: #946B2D; /* Bronze */
-    --dark-ravenclaw: #0A1426; /* Dark Ravenclaw Blue */
-    --white: #FFFFFF; /* Keep white as-is */
+    --bg: #0a0e14;          /* terminal background */
+    --bg-alt: #11161d;      /* raised surface */
+    --border: #1f2630;      /* hairline borders */
+    --text: #c5c8c6;        /* primary text */
+    --muted: #8b949e;       /* secondary text */
+    --comment: #4b5263;     /* code-comment gray */
+    --green: #2fbf71;       /* syntax green */
+    --cyan: #79c0ff;        /* syntax cyan */
+    --yellow: #e3b341;      /* syntax yellow */
 }
 
 * {
@@ -11,86 +16,107 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background: var(--green);
+    color: var(--bg);
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--dark-ravenclaw);
-    color: var(--white);
-    line-height: 1.6;
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Consolas', 'Menlo', monospace;
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
 header {
-    background-color: var(--blue-ravenclaw);
-    padding: 20px;
+    padding: 40px 20px 28px;
     text-align: center;
-    border-bottom: 4px solid var(--bronze-ravenclaw);
+    border-bottom: 1px solid var(--border);
 }
 
 header h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--bronze-ravenclaw);
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: -0.5px;
 }
 
 header p {
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--muted);
 }
 
 .container {
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 24px;
 }
 
 .section {
-    margin-bottom: 40px;
+    margin-bottom: 48px;
 }
 
 .section h2 {
-    font-size: 2rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    color: var(--bronze-ravenclaw);
-    margin-bottom: 10px;
+    color: var(--green);
+    margin-bottom: 16px;
+}
+
+.section h2::before {
+    content: '// ';
+    color: var(--comment);
 }
 
 .card {
-    background-color: var(--blue-ravenclaw);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border);
+    padding: 16px 18px;
+    margin-bottom: 16px;
 
     text-decoration: none; /* Remove underline */
-    color: inherit; /* Make the color inherit from the parent element */    
+    color: inherit; /* Make the color inherit from the parent element */
     display: block; /* Ensure it behaves like a block */
 }
 
-.card-certificate {
-    text-align: center;    
+.card:hover {
+    border-left-color: var(--green);
 }
 
 .card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cyan);
+    margin-bottom: 6px;
 }
 
 .card p {
-    font-size: 1rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--cyan);
+}
+
+.card a:hover {
+    text-decoration: underline;
+    color: var(--green);
 }
 
 footer {
+    padding: 24px;
     text-align: center;
-    padding: 20px;
-    background-color: var(--blue-ravenclaw);
-    border-top: 4px solid var(--bronze-ravenclaw);
+    border-top: 1px solid var(--border);
 }
 
 footer p {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--bronze-ravenclaw);
+    font-size: 0.8rem;
+    color: var(--comment);
 }
-
 
 /* mas */
 
@@ -112,36 +138,21 @@ footer p {
     margin-bottom: 5px;
 }
 
-
 .button-container {
     text-align: center; /* Center the buttons horizontally */
 }
 
 .button {
     display: inline-block; /* Add this line */
-    padding: 5px 10px;
-    font-size: 15px;
-    color: white;
-    background-color: var(--blue-ravenclaw);
-    border: none;
-    border-radius: 8px; /* Rounded corners */
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    color: var(--green);
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border);
     cursor: pointer;
     text-decoration: none;
 }
 
 .button:hover {
-    background-color: var(--bronze-ravenclaw);
-}
-
-.card-certificate:hover {
-    background-color: var(--bronze-ravenclaw);
-}
-
-.card a {
-    text-decoration: none; /* Remove underline */
-    color: var(--bronze-ravenclaw);
-}
-
-.card a:hover {
-    text-decoration: underline;
+    border-color: var(--green);
 }
